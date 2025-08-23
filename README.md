@@ -23,9 +23,11 @@
 
 ---
 
-## 📂 目录结构
+<details>
+<summary>📂 目录结构（点击展开）</summary>
 
-med-meal-agent/
+<pre>
+&lt;pre&gt; med-meal-agent/
 ├─ .env                                      # 本地测试环境变量（示例；勿提交）
 ├─ i18n/
 │  ├─ base_dir/
@@ -63,3 +65,6 @@ med-meal-agent/
 ├─ seed_recipes.py                           # 构建向量库脚本
 ├─ requirements.txt
 └─ README.md
+&lt;/pre&gt;
+</pre>
+</details>
