@@ -1,0 +1,31 @@
+{
+  "entries": [
+    { "canonical_en": "hypertension", "zh_aliases": ["高血压", "高血壓", "血压高", "血壓高"], "en_aliases": ["htn"], "category": "cardio" },
+    { "canonical_en": "t2dm", "zh_aliases": ["2型糖尿病", "二型糖尿病", "糖尿病"], "en_aliases": ["type 2 diabetes", "t2d"], "category": "endocrine" },
+    { "canonical_en": "type 1 diabetes", "zh_aliases": ["1型糖尿病", "一型糖尿病"], "en_aliases": ["t1d"], "category": "endocrine" },
+    { "canonical_en": "hyperlipidemia", "zh_aliases": ["高血脂", "血脂异常", "血脂異常"], "en_aliases": ["dyslipidemia"], "category": "metabolic" },
+    { "canonical_en": "coronary artery disease", "zh_aliases": ["冠心病", "冠狀動脈粥樣硬化"], "en_aliases": ["cad"], "category": "cardio" },
+    { "canonical_en": "stroke", "zh_aliases": ["卒中", "中风", "中風"], "en_aliases": ["cva", "cerebrovascular accident"], "category": "neuro" },
+    { "canonical_en": "ckd", "zh_aliases": ["慢性肾病", "慢性腎病", "肾功能不全", "腎功能不全"], "en_aliases": ["chronic kidney disease"], "category": "renal" },
+    { "canonical_en": "nafld", "zh_aliases": ["非酒精性脂肪肝", "脂肪肝"], "en_aliases": ["nonalcoholic fatty liver disease"], "category": "hepatic" },
+    { "canonical_en": "nash", "zh_aliases": ["非酒精性脂肪性肝炎"], "en_aliases": ["nonalcoholic steatohepatitis"], "category": "hepatic" },
+    { "canonical_en": "gout", "zh_aliases": ["痛风", "痛風", "高尿酸血症", "高尿酸"], "en_aliases": ["hyperuricemia"], "category": "metabolic" },
+    { "canonical_en": "anemia", "zh_aliases": ["贫血", "貧血"], "category": "heme" },
+    { "canonical_en": "iron deficiency", "zh_aliases": ["缺铁", "缺鐵"], "category": "heme" },
+    { "canonical_en": "hypothyroidism", "zh_aliases": ["甲减", "甲狀腺功能減退"], "category": "endocrine" },
+    { "canonical_en": "hyperthyroidism", "zh_aliases": ["甲亢", "甲狀腺功能亢進", "甲状腺功能亢进"], "category": "endocrine" },
+    { "canonical_en": "pcos", "zh_aliases": ["多囊卵巢综合征", "多囊卵巢綜合徵"], "en_aliases": ["polycystic ovary syndrome"], "category": "endocrine" },
+    { "canonical_en": "osteoporosis", "zh_aliases": ["骨质疏松", "骨質疏鬆"], "category": "bone" },
+    { "canonical_en": "gerd", "zh_aliases": ["胃食管反流", "胃食道逆流", "反酸"], "en_aliases": ["reflux", "acid reflux"], "category": "gi" },
+    { "canonical_en": "gastritis", "zh_aliases": ["胃炎"], "category": "gi" },
+    { "canonical_en": "peptic ulcer", "zh_aliases": ["消化性溃疡", "胃溃疡", "十二指肠溃疡", "消化性潰瘍", "胃潰瘍", "十二指腸潰瘍"], "category": "gi" },
+    { "canonical_en": "ibd", "zh_aliases": ["炎症性肠病", "炎症性腸病"], "en_aliases": ["inflammatory bowel disease"], "category": "gi" },
+    { "canonical_en": "crohn disease", "zh_aliases": ["克罗恩病", "克羅恩病"], "en_aliases": ["crohn's disease"], "category": "gi" },
+    { "canonical_en": "ulcerative colitis", "zh_aliases": ["溃疡性结肠炎", "潰瘍性結腸炎"], "category": "gi" },
+    { "canonical_en": "ibs", "zh_aliases": ["肠易激综合征", "腸易激綜合征"], "en_aliases": ["irritable bowel syndrome"], "category": "gi" },
+    { "canonical_en": "celiac disease", "zh_aliases": ["乳糜泻", "乳糜瀉", "麸质过敏", "麩質過敏"], "category": "gi" },
+    { "canonical_en": "pregnancy", "zh_aliases": ["妊娠", "怀孕", "孕期", "孕婦", "孕妇"], "en_aliases": ["gestation"], "category": "ob" },
+    { "canonical_en": "gdm", "zh_aliases": ["妊娠期糖尿病"], "en_aliases": ["gestational diabetes"], "category": "ob" },
+    { "canonical_en": "lactose intolerance", "zh_aliases": ["乳糖不耐受", "乳糖不耐"], "category": "gi" }
+  ]
+}

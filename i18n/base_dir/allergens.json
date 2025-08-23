@@ -1,0 +1,31 @@
+{
+  "entries": [
+    { "canonical_en": "peanut", "zh_aliases": ["花生"], "category": "allergen" },
+    { "canonical_en": "tree nuts", "zh_aliases": ["坚果", "堅果"], "en_aliases": ["tree nut"], "category": "allergen" },
+    { "canonical_en": "walnut", "zh_aliases": ["核桃"], "category": "allergen" },
+    { "canonical_en": "cashew", "zh_aliases": ["腰果"], "category": "allergen" },
+    { "canonical_en": "almond", "zh_aliases": ["杏仁"], "category": "allergen" },
+    { "canonical_en": "hazelnut", "zh_aliases": ["榛子"], "category": "allergen" },
+    { "canonical_en": "pistachio", "zh_aliases": ["开心果", "開心果"], "category": "allergen" },
+    { "canonical_en": "pecan", "zh_aliases": ["碧根果", "山核桃"], "category": "allergen" },
+    { "canonical_en": "sesame", "zh_aliases": ["芝麻"], "category": "allergen" },
+    { "canonical_en": "soy", "zh_aliases": ["大豆", "黄豆"], "en_aliases": ["soya"], "category": "allergen" },
+    { "canonical_en": "wheat", "zh_aliases": ["小麦", "小麥"], "category": "allergen" },
+    { "canonical_en": "gluten", "zh_aliases": ["麸质", "麩質", "面筋"], "category": "allergen" },
+    { "canonical_en": "milk", "zh_aliases": ["牛奶", "乳制品", "奶制品"], "en_aliases": ["dairy"], "category": "allergen" },
+    { "canonical_en": "egg", "zh_aliases": ["鸡蛋", "雞蛋", "鸡蛋白", "蛋白", "蛋黄", "蛋黃"], "category": "allergen" },
+    { "canonical_en": "shellfish", "zh_aliases": ["甲壳类", "甲殼類", "贝类", "貝類", "海鲜", "海鮮"], "category": "allergen" },
+    { "canonical_en": "shrimp", "zh_aliases": ["虾", "蝦"], "category": "allergen" },
+    { "canonical_en": "crab", "zh_aliases": ["蟹"], "category": "allergen" },
+    { "canonical_en": "lobster", "zh_aliases": ["龙虾", "龍蝦"], "category": "allergen" },
+    { "canonical_en": "fish", "zh_aliases": ["鱼类", "魚類", "鱼"], "category": "allergen" },
+    { "canonical_en": "salmon", "zh_aliases": ["三文鱼", "鮭魚"], "category": "allergen" },
+    { "canonical_en": "tuna", "zh_aliases": ["金枪鱼", "金槍魚"], "category": "allergen" },
+    { "canonical_en": "cod", "zh_aliases": ["鳕鱼", "鱈魚"], "category": "allergen" },
+    { "canonical_en": "celery", "zh_aliases": ["芹菜"], "category": "allergen" },
+    { "canonical_en": "mustard", "zh_aliases": ["芥末", "芥子"], "category": "allergen" },
+    { "canonical_en": "sulfites", "zh_aliases": ["亚硫酸盐", "二氧化硫"], "en_aliases": ["sulphites"], "category": "allergen" },
+    { "canonical_en": "buckwheat", "zh_aliases": ["荞麦", "蕎麥"], "category": "allergen" },
+    { "canonical_en": "mollusk", "zh_aliases": ["软体动物", "軟體動物"], "category": "allergen" }
+  ]
+}
