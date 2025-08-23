@@ -26,25 +26,40 @@
 ## 📂 目录结构
 
 med-meal-agent/
+├─ .env                                      # 本地测试环境变量（示例；勿提交）
 ├─ i18n/
-│ ├─ base_dir/allergens.json, conditions.json, ingredients.json        # 基础词库映射
-│ ├─ zh_lexicon.py          # 中英映射词表与工具函数
-│ └─ units.py               # 单位与数值换算（mmol→mg/dL、斤/两→g 等）
+│  ├─ base_dir/
+│  │  ├─ allergens.json                      # 基础词库映射(过敏原映射)
+│  │  ├─ conditions.json                     # 基础词库映射(疾病/状况映射)
+│  │  └─ ingredients.json                    # 基础词库映射(食材映射)
+│  ├─ zh_lexicon.py                          # 中英映射词表与工具函数
+│  └─ units.py                               # 单位与数值换算（mmol→mg/dL、斤/两→g 等）
 ├─ parsers/
-│ └─ health_report_zh.py    # 中文体检报告抽取 → HealthReport
-├─ data/recipes/ # 种子菜谱 JSON/MD
-├─ data/embeddings/ # 向量库持久化
+│  ├─ health_report_zh.py                    # 中文体检报告抽取 → HealthReport
+│  └─ base_dir/                              # 测试/演示用样例素材
+│     ├─ test.txt                            # OCR 文本样例
+│     ├─ test11.jpg                          # 图片样例（血压页）
+│     └─ test22.jpg                          # 图片样例（化验页）
+├─ data/
+│  ├─ recipes/                               # 种子菜谱 JSON/MD
+│  └─ embeddings/                            # 向量库持久化
 ├─ agents/
-│ ├─ tools.py # 工具函数（库存解析、清单生成）
-│ ├─ planner.py # Agent 调度与食谱规划
-│ └─ constraints.py # 营养/疾病约束与打分规则
+│  ├─ tools.py                               # 工具函数（库存解析、清单生成）
+│  ├─ planner.py                             # Agent 调度与食谱规划
+│  └─ constraints.py                         # 营养/疾病约束与打分规则
 ├─ models/
-│ └─ schemas.py # Pydantic 数据模型
+│  └─ schemas.py                             # Pydantic 数据模型
 ├─ services/
-│ ├─ recipe_retriever.py # 向量库构建与检索
-│ ├─ nutrition.py # 营养计算辅助函数
-│ └─ inventory.py # 库存管理
-├─ app.py # FastAPI 服务入口
-├─ seed_recipes.py # 构建向量库脚本
+│  ├─ recipe_retriever.py                    # 向量库构建与检索
+│  ├─ nutrition.py                           # 营养计算辅助函数
+│  └─ inventory.py                           # 库存管理
+├─ tests/                                    # 单元/集成测试
+│  ├─ conftest.py                            # pytest 配置（加载 .env、注册标记等）
+│  ├─ test_parsers_health_report_zh_full.py  # 全量逻辑的离线/伪造测试
+│  ├─ test_parsers_health_report_zh_live.py  # 调真实 LLM 的 live 测试
+│  ├─ test_i18n_lexicon.py                   # 词库加载/映射测试
+│  └─ test_i18n_units.py                     # 单位/数值换算测试
+├─ app.py                                    # FastAPI 服务入口
+├─ seed_recipes.py                           # 构建向量库脚本
 ├─ requirements.txt
 └─ README.md
