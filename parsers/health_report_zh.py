@@ -289,26 +289,46 @@ def _llm_structured_from_text(text: str, model: str = "gpt-4o-mini") -> HRExtrac
 # -----------------------------
 # 视觉 OCR（图片→纯文本）走 LLM
 # -----------------------------
-
-def _redact_header(img_bytes: bytes, top_px: int = 180) -> bytes:
+def preprocess_for_ocr(img_bytes: bytes) -> bytes:
+    """
+    对体检单进行“保护性预处理”：
+    - 盖掉 Header（机构抬头/姓名/证件号）
+    - 盖掉 Footer（电话/二维码/条码）
+    - 额外盖掉右下角（常见二维码区域）
+    - 盖掉中上方一条（有些报告标题下仍有 PII）
+    目标：尽量降低被模型因 PII 拒绝的概率，同时不影响主要化验区块。
+    """
     im = Image.open(io.BytesIO(img_bytes)).convert("RGB")
     w, h = im.size
     draw = ImageDraw.Draw(im)
-    draw.rectangle([0, 0, w, min(top_px, h)], fill="white")
+
+    # Header：约 22% 高度
+    draw.rectangle([0, 0, w, int(h * 0.22)], fill="white")
+
+    # Footer：约 90%~100%
+    draw.rectangle([0, int(h * 0.90), w, h], fill="white")
+
+    # 右下角二维码/条形码常见区域
+    draw.rectangle([int(w * 0.78), int(h * 0.78), w, h], fill="white")
+
+    # 中上方再盖一条（视情况保守一点）
+    draw.rectangle([0, int(h * 0.22), w, int(h * 0.27)], fill="white")
+
     buf = io.BytesIO()
     im.save(buf, format="PNG")
     return buf.getvalue()
 
-def _llm_ocr_image_to_text(image_bytes: bytes, model: str = "gpt-4o-mini", redact_top_px: int | None = 180) -> str:
+def _llm_ocr_image_to_text(image_bytes: bytes, model: str = "gpt-4o-mini", do_preprocess: bool = True) -> str:
     """
     用 LLM 的视觉能力从图片中“抄录”检测结果为纯文本。
     返回值直接再喂 _llm_structured_from_text。
     """
-    # OCR 前先打码抬头，减少因 PII 被拒绝
-    if redact_top_px:
+    # 先做图像预处理，尽量去掉可能触发拒答的 PII/二维码/机构抬头
+    if do_preprocess:
         try:
-            image_bytes = _redact_header(image_bytes, redact_top_px)
+            image_bytes = preprocess_for_ocr(image_bytes)
         except Exception:
+            # 任何图像处理失败，直接回落到原图
             pass
         
     b64 = base64.b64encode(image_bytes).decode("utf-8")
