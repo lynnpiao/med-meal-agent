@@ -1,0 +1,85 @@
+{
+  "id": 8337589682589421160,
+  "title": "Plantain Pizza",
+  "ingredients": [
+    {
+      "name": "beef",
+      "amount": "1.0 cup"
+    },
+    {
+      "name": "bell pepper",
+      "amount": "1.0"
+    },
+    {
+      "name": "bell peppers",
+      "amount": "1.0 handful"
+    },
+    {
+      "name": "bread flour",
+      "amount": "2.0 cups"
+    },
+    {
+      "name": "seasoning cube",
+      "amount": "3.0 servings"
+    },
+    {
+      "name": "oil",
+      "amount": "1.0 tablespoon"
+    },
+    {
+      "name": "oil",
+      "amount": "1.0 teaspoon"
+    },
+    {
+      "name": "onions",
+      "amount": "1.0 handful"
+    },
+    {
+      "name": "over-ripe plantain",
+      "amount": "1.0"
+    },
+    {
+      "name": "salt",
+      "amount": "1.0 teaspoon"
+    },
+    {
+      "name": "sugar",
+      "amount": "0.5 teaspoon"
+    },
+    {
+      "name": "tomato)",
+      "amount": "1.0"
+    },
+    {
+      "name": "water",
+      "amount": "0.75 cup"
+    },
+    {
+      "name": "yeast",
+      "amount": "1.5 teaspoons"
+    }
+  ],
+  "instructions": [
+    "Dissolve the yeast in warm water and leave to stand for about 5 minutes.",
+    "Mix the oil, flour, salt, sugar and mashed plantain and pour in the dissolved yeast.Knead the dough till its elastic which may take aBout 15-20 minutes By hand or 10 minutes in a mixer.Coat a Bowl lightly with oil and place the dough in it. Cover with a plastic wrap and leave to rise between 1.5 – 2 hours.While the dough is rising, heat up the oil for the sauce, fry the Blended tomato and pepper, season and stir fry the Beef in the tomato sauce. Set aside.When the dough rises, divide into two.",
+    "Sprinkle some flour on a flat surface and with a rolling pin, flatten out the dough but not excessively.",
+    "Cut the dough into your desired shape, rub some oil on it and spread your sauce and toppings on it and set aside.",
+    "Heat up your oven to 350 F and place your pizza dough on a lightly oiled foil pan and",
+    "Bake for 12-15 mins.",
+    "Serve warm"
+  ],
+  "per_serving_nutrition": {
+    "kcal": 642.7,
+    "protein_g": 25.03,
+    "carb_g": 84.82,
+    "fat_g": 22.92,
+    "sodium_mg": 839.68
+  },
+  "tags": [
+    "lunch",
+    "main course",
+    "main dish",
+    "dinner",
+    "dairy free"
+  ]
+}

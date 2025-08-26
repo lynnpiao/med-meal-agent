@@ -1,0 +1,61 @@
+{
+  "id": 10407749686263291118,
+  "title": "Crab Wontons",
+  "ingredients": [
+    {
+      "name": "crabmeat",
+      "amount": "1.0 can"
+    },
+    {
+      "name": "cream cheese",
+      "amount": "4.0 oz"
+    },
+    {
+      "name": "reduced fat mayonnaise",
+      "amount": "2.0 tablespoons"
+    },
+    {
+      "name": "soy sauce",
+      "amount": "0.25 tsp"
+    },
+    {
+      "name": "garlic",
+      "amount": "0.25 tsp"
+    },
+    {
+      "name": "onion powder",
+      "amount": "0.25 tsp"
+    },
+    {
+      "name": "ground pepper",
+      "amount": "12.0 servings"
+    },
+    {
+      "name": "won ton wrappers",
+      "amount": "12.0"
+    }
+  ],
+  "instructions": [
+    "Preheat oven to 350F. Spray a mini muffin tin with nonstick cooking spray.",
+    "In a medium bowl, combine crab meat, cream cheese, mayonaise, soy sauce, garlic, onion powder,and pepper.",
+    "Mix until well combined.",
+    "Place 1 won ton wrapper in each 12 mini muffin cups. The edges of the won ton wrappers will extend beyond the mini muffin tin cups and may need to be folded slightly. Fill the center of each won ton cup with crab mixture.",
+    "Bake 15 to 20 minutes or until edges of cups are golden brown and filling is heated through."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 46.53,
+    "protein_g": 4.12,
+    "carb_g": 5.41,
+    "fat_g": 0.81,
+    "sodium_mg": 194.23
+  },
+  "tags": [
+    "antipasti",
+    "starter",
+    "snack",
+    "appetizer",
+    "antipasto",
+    "hor d'oeuvre",
+    "pescatarian"
+  ]
+}

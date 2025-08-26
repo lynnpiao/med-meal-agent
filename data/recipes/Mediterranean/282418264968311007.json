@@ -1,0 +1,90 @@
+{
+  "id": 282418264968311007,
+  "title": "Strawberry Cheesecake Chocolate Crepes",
+  "ingredients": [
+    {
+      "name": "cream cheese",
+      "amount": "8.0 oz"
+    },
+    {
+      "name": "strawberries",
+      "amount": "1.25 cup"
+    },
+    {
+      "name": "vanilla extract",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "lemon juice",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "granulated sugar",
+      "amount": "2.0 tbsp"
+    },
+    {
+      "name": "flour",
+      "amount": "1.5 cups"
+    },
+    {
+      "name": "cocoa powder",
+      "amount": "0.25 cup"
+    },
+    {
+      "name": "kosher salt",
+      "amount": "0.125 tsp"
+    },
+    {
+      "name": "eggs",
+      "amount": "3.0"
+    },
+    {
+      "name": "milk",
+      "amount": "1.25 cups"
+    },
+    {
+      "name": "water",
+      "amount": "0.25 cup"
+    },
+    {
+      "name": "butter",
+      "amount": "4.0 tbsp"
+    },
+    {
+      "name": "vanilla extract",
+      "amount": "0.5 tsp"
+    }
+  ],
+  "instructions": [
+    "How to Make Strawberry Creme Cheese Filling",
+    "Add cream cheese, strawberries, vanilla extract, lemon juice, and granulated sugar into a medium-sized mixing bowl.",
+    "Use a hand mixer, wooden spoon, or spatula to mix ingredients.",
+    "Mix until smooth.",
+    "Set aside.",
+    "How to Blend Chocolate Crepes Ingredients",
+    "Combine flour, sugar, cocoa powder, salt, and eggs to a food processor or blender.",
+    "If using a food processor, keep it running as you add milk and water. Continue to pulse intil blended well.",
+    "Pour in melted butter and vanilla extract.",
+    "Set bowl aside.",
+    "How to Make Chocolate Crepes",
+    "Heat crepe pan or 8\"-10\" omelet pan over medium heat.",
+    "Pour 1/4 cup of batter directly into the middle of the pan and swirl to cover the bottom.",
+    "Cook the crepe for 2-3 minutes or until the bottom is light brown and the edges are completely set.",
+    "Flip the crepe over and cook for an additional minute.",
+    "Transfer to a serving platter and repeat for the rest of the batter."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 618.39,
+    "protein_g": 16.47,
+    "carb_g": 55.54,
+    "fat_g": 37.95,
+    "sodium_mg": 331.57
+  },
+  "tags": [
+    "morning meal",
+    "dessert",
+    "brunch",
+    "breakfast",
+    "lacto ovo vegetarian"
+  ]
+}

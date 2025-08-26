@@ -1,0 +1,75 @@
+{
+  "id": 1277561979524187,
+  "title": "Greek-Style Baked Fish: Fresh, Simple, and Delicious",
+  "ingredients": [
+    {
+      "name": "bell pepper",
+      "amount": "1.0"
+    },
+    {
+      "name": "rice",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "basil",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "feta cheese",
+      "amount": "2.0 oz"
+    },
+    {
+      "name": "fish fillets",
+      "amount": "1.0 lb"
+    },
+    {
+      "name": "olive oil",
+      "amount": "2.0 Tablespoons"
+    },
+    {
+      "name": "oregano",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "pepper",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "onion",
+      "amount": "0.5"
+    },
+    {
+      "name": "salt & pepper",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "tomato",
+      "amount": "1.0"
+    },
+    {
+      "name": "white wine",
+      "amount": "0.25 cup"
+    }
+  ],
+  "instructions": [
+    "Preheat the oven to 450 degrees F. Choose an oven-proof baking dish that your fish will fit in without overlapping and spray it with cooking spray.",
+    "Lay the fish fillets in the baking pan in a single layer, season with salt and pepper, then top the fish with red onion and bell pepper.",
+    "Sprinkle with dried basil and oregano, the tomato, and the feta cheese, then drizzle the white wine and olive oil over top. Grind some fresh pepper over the top.",
+    "Bake uncovered for about 12 – 15 minutes or until the fish flakes easily with a fork. Squeeze the lemon wedges over the cooked fish, garnish with the fresh basil and/or oregano and serve with hot cooked rice."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 344.33,
+    "protein_g": 27.77,
+    "carb_g": 28.01,
+    "fat_g": 12.4,
+    "sodium_mg": 419.71
+  },
+  "tags": [
+    "lunch",
+    "main course",
+    "main dish",
+    "dinner",
+    "gluten free",
+    "pescatarian"
+  ]
+}

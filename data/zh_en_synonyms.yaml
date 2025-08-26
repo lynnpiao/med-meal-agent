@@ -1,0 +1,43 @@
+# 分类：烹饪方式
+炒: ["stir fry", "stir-fry", "stirfried"]
+煎: ["pan fry", "pan-fry", "sear"]
+烤: ["roast", "bake", "grill"]
+炖: ["stew", "braise"]
+蒸: ["steam"]
+
+# 分类：主食/菜品
+炒饭: ["fried rice"]
+锅贴: ["potsticker", "pot stickers", "dumpling", "gyoza"]
+馄饨: ["wonton", "wontons"]
+饺子: ["dumpling", "dumplings"]
+粥: ["congee", "porridge"]
+凉拌: ["cold dish", "salad"]
+
+# 分类：食材
+蔬菜: ["vegetable", "veggie", "veggies"]
+西兰花: ["broccoli"]
+菜花: ["cauliflower"]
+花椰菜: ["cauliflower"]
+豆腐: ["tofu"]
+鸡胸肉: ["chicken breast"]
+
+# 分类：调味
+酱油: ["soy sauce"]
+香油: ["sesame oil"]
+芝麻油: ["sesame oil"]
+花椒: ["sichuan peppercorn", "peppercorn"]
+
+# 分类：饮食偏好/健康标签
+低脂: ["low fat", "low-fat", "skinny", "light"]
+低卡: ["low calorie", "low-calorie"]
+高蛋白: ["high protein", "high-protein", "protein rich"]
+低碳: ["low carb", "low-carb"]
+无麸质: ["gluten free", "gluten-free"]
+无乳糖: ["lactose free", "lactose-free"]
+素食: ["vegetarian", "veggie"]
+纯素: ["vegan"]
+清爽: ["light", "refreshing"]
+
+# 分类：菜系
+中餐: ["chinese"]
+地中海: ["mediterranean"]

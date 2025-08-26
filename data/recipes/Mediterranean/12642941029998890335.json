@@ -1,0 +1,48 @@
+{
+  "id": 12642941029998890335,
+  "title": "Simple Whole Wheat Crepes",
+  "ingredients": [
+    {
+      "name": "butter",
+      "amount": "3.0 Tablespoons"
+    },
+    {
+      "name": "eggs",
+      "amount": "3.0"
+    },
+    {
+      "name": "maple syrup",
+      "amount": "1.0 Tablespoon"
+    },
+    {
+      "name": "milk",
+      "amount": "1.0 cup"
+    },
+    {
+      "name": "sea salt",
+      "amount": "1.0 pinch"
+    },
+    {
+      "name": "flour",
+      "amount": "1.0 cup"
+    }
+  ],
+  "instructions": [
+    "Place all ingredients in a blender and mix until smooth. The batter should be thin.",
+    "Let it sit at least 30 minutes—or even overnight.When it comes time to cook your crêpes you can do it the traditional way, in a crêpe pan, or you can use an electric crêpe maker."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 272.48,
+    "protein_g": 10.25,
+    "carb_g": 27.46,
+    "fat_g": 14.11,
+    "sodium_mg": 147.69
+  },
+  "tags": [
+    "morning meal",
+    "dessert",
+    "brunch",
+    "breakfast",
+    "lacto ovo vegetarian"
+  ]
+}

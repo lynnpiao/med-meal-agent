@@ -1,0 +1,49 @@
+{
+  "id": 15422370645692005656,
+  "title": "Chinese Steamed Flan",
+  "ingredients": [
+    {
+      "name": "eggs",
+      "amount": "4.0 large"
+    },
+    {
+      "name": "granulated sugar",
+      "amount": "0.33333334 cup"
+    },
+    {
+      "name": "granulated sugar",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "strawberries",
+      "amount": "6.0 servings"
+    },
+    {
+      "name": "vanilla",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "milk",
+      "amount": "2.0 cups"
+    }
+  ],
+  "instructions": [
+    "Place 2 inches of water on the bottom portion of steamer. Cover and allow water to come to a boil. In the meantime, heat milk and sugar in a saucepan until just warmed and sugar has dissolved.",
+    "Whisk eggs and vanilla in a large bowl until blended. Slowly pour warmed milk into the eggs, beating until well combined. Scoop off foam and discard. Ladle into prepared ramekins and place into steamer.Turn down heat this is very important to medium and steam for 15 minutes.",
+    "Remove and allow to cool. Once cool, cover and refrigerate overnight. When ready to serve, carefully run a knife around the inside each ramekin to loosen the flan.",
+    "Place a plate on top of the flan and invert until flan pops out.",
+    "Serve with sliced strawberries."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 251.51,
+    "protein_g": 7.83,
+    "carb_g": 42.85,
+    "fat_g": 6.29,
+    "sodium_mg": 80.02
+  },
+  "tags": [
+    "dessert",
+    "gluten free",
+    "lacto ovo vegetarian"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": 13054075586599920414,
+  "title": "Mango Fried Rice",
+  "ingredients": [
+    {
+      "name": "chicken stock",
+      "amount": "2.0 cups"
+    },
+    {
+      "name": "seasoning cubes",
+      "amount": "2.0 servings"
+    },
+    {
+      "name": "mango",
+      "amount": "3.0 slices"
+    },
+    {
+      "name": "rice",
+      "amount": "1.0 cup"
+    },
+    {
+      "name": "vegetables",
+      "amount": "1.0 cup"
+    },
+    {
+      "name": "scotch bonnet pepper",
+      "amount": "1.0"
+    }
+  ],
+  "instructions": [
+    "Wash your rice and bring to boil on medium heat with very little water as you are still going to cook it in chicken stock.Once the rice is slightly soft and the initial water has dried up, reduce the heat and pour in the chicken stock and cook till the chicken stock is all absorbed and has dried up. The chicken stock if freshly made will have some oil from the chicken so your rice does not need oil.Increase the heat and stir in the chopped vegetables and pepper.",
+    "Add your seasoning cube.Finally stir in your cubed mango and serve warm with any protein of your choice. I’d say chicken but it’s up to you."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 486.24,
+    "protein_g": 15.96,
+    "carb_g": 95.36,
+    "fat_g": 4.03,
+    "sodium_mg": 404.1
+  },
+  "tags": [
+    "side dish",
+    "lunch",
+    "main course",
+    "main dish",
+    "dinner",
+    "gluten free",
+    "dairy free"
+  ]
+}

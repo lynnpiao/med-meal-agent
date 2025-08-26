@@ -1,0 +1,5 @@
+{
+  "model": "BAAI/bge-m3",
+  "dim": 1024,
+  "es_index": "recipes"
+}

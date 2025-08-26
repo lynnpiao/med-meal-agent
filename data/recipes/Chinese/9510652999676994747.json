@@ -1,0 +1,127 @@
+{
+  "id": 9510652999676994747,
+  "title": "Chinese Chicken Salad With Chipotle Dressing",
+  "ingredients": [
+    {
+      "name": "pea-mond dressing",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "rice wine vinegar",
+      "amount": "0.25 cup"
+    },
+    {
+      "name": "smooth peanut butter",
+      "amount": "1.0 tablespoon"
+    },
+    {
+      "name": "smooth almond butter",
+      "amount": "1.0 tablespoon"
+    },
+    {
+      "name": "ginger",
+      "amount": "1.0 tablespoon"
+    },
+    {
+      "name": "adobo chipotle pepper juice",
+      "amount": "2.0 teaspoons"
+    },
+    {
+      "name": "adobo chipotle pepper puree",
+      "amount": "1.0 teaspoon"
+    },
+    {
+      "name": "soy sauce",
+      "amount": "1.0 tablespoon"
+    },
+    {
+      "name": "honey",
+      "amount": "2.0 tablespoons"
+    },
+    {
+      "name": "sesame oil",
+      "amount": "2.0 teaspoons"
+    },
+    {
+      "name": "canola oil",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "salt and pepper",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "salad",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "napa cabbage",
+      "amount": "0.5 head"
+    },
+    {
+      "name": "romaine lettuce",
+      "amount": "0.5 head"
+    },
+    {
+      "name": "carrots",
+      "amount": "2.0"
+    },
+    {
+      "name": "snow peas",
+      "amount": "0.25 pound"
+    },
+    {
+      "name": "cilantro leaves",
+      "amount": "0.25 cup"
+    },
+    {
+      "name": "green onion",
+      "amount": "0.25 cup"
+    },
+    {
+      "name": "rotisserie chicken",
+      "amount": "2.0 cups"
+    },
+    {
+      "name": "roasted peanuts",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "mint leaves",
+      "amount": "0.25 cup"
+    },
+    {
+      "name": "chili oil",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "lime",
+      "amount": "1.0 halves"
+    }
+  ],
+  "instructions": [
+    "Whisk together the vinegar, peanut & almond butters, ginger, chipotle pepper puree, soy sauce, honey, sesame oil, and canola oil in a medium bowl. Season with salt and pepper, to taste.",
+    "Combine cabbage, lettuce, carrots, snow peas, cilantro, and green onion in a large bowl.",
+    "Add the dressing and toss to combine.",
+    "Transfer to a serving platter and top with the shredded chicken, chopped peanuts, and mint.",
+    "Drizzle with chili oil, if desired.",
+    "Garnish with lime halves."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 779.91,
+    "protein_g": 51.07,
+    "carb_g": 48.01,
+    "fat_g": 45.77,
+    "sodium_mg": 1011.27
+  },
+  "tags": [
+    "side dish",
+    "lunch",
+    "main course",
+    "salad",
+    "main dish",
+    "dinner",
+    "gluten free",
+    "dairy free"
+  ]
+}

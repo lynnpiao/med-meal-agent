@@ -1,0 +1,70 @@
+{
+  "id": 4010381656515217985,
+  "title": "Simple Skillet Lasagna",
+  "ingredients": [
+    {
+      "name": "basil and basil sprig",
+      "amount": "1.0 leaves"
+    },
+    {
+      "name": "tomatoes",
+      "amount": "56.0 oz"
+    },
+    {
+      "name": "garlic",
+      "amount": "3.0 cloves"
+    },
+    {
+      "name": "sausage",
+      "amount": "1.5 lbs"
+    },
+    {
+      "name": "m zarella cheese",
+      "amount": "1.0 oz"
+    },
+    {
+      "name": "onion",
+      "amount": "1.0 small"
+    },
+    {
+      "name": "oregano flakes",
+      "amount": "5.0 servings"
+    },
+    {
+      "name": "no boil lasagna noodles",
+      "amount": "5.0 servings"
+    },
+    {
+      "name": "pepper flakes",
+      "amount": "0.5 tsp"
+    },
+    {
+      "name": "ricotta cheese",
+      "amount": "5.0 servings"
+    },
+    {
+      "name": "salt and pepper",
+      "amount": "5.0 servings"
+    }
+  ],
+  "instructions": [
+    "In a large saute pan, heat oil on high.",
+    "Add sausage and cook until browned, about 3-5 minutes.",
+    "Transfer to a side bowl and set aside.Reduce the heat to medium low and add your onion, garlic, and pepper flakes. Cook until onions are softened, about 8 minutes.",
+    "Add your oregano, tomatoes and their juices (crushing the whole tomatoes with your hands or a mixer if you prefer), the basil sprig, and the cooked sausage.",
+    "Add salt and pepper and simmer for about 5 minutes.Break half of the lasagna noodles in half and place into the meat mixture under the sausage. Distribute them evenly throughout. Take the other half of the noodles and use a spoon to submerge them down into the pan.Dollop Ricotta over lasagna and mix in with the sauce. Top with Mozzarella and bake in the oven on 325 degrees for 15 minutes. Top with basil, then remove from heat and allow to cool before serving."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 761.2,
+    "protein_g": 30.69,
+    "carb_g": 58.45,
+    "fat_g": 46.2,
+    "sodium_mg": 1684.89
+  },
+  "tags": [
+    "lunch",
+    "main course",
+    "main dish",
+    "dinner"
+  ]
+}

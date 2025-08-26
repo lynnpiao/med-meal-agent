@@ -1,0 +1,59 @@
+{
+  "id": 4843006281470771206,
+  "title": "Broccolini Quinoa Pilaf",
+  "ingredients": [
+    {
+      "name": "broccolini",
+      "amount": "1.0 bunch"
+    },
+    {
+      "name": "garlic clove",
+      "amount": "1.0"
+    },
+    {
+      "name": "olive oil",
+      "amount": "1.0 tbsp"
+    },
+    {
+      "name": "onion",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "quinoa",
+      "amount": "1.0 cup"
+    },
+    {
+      "name": "vegetable broth",
+      "amount": "2.0 cups"
+    },
+    {
+      "name": "walnuts",
+      "amount": "2.0 oz"
+    }
+  ],
+  "instructions": [
+    "In a large pan with lid heat olive oil over medium high heat.",
+    "Add onions and cook for 1 minute.",
+    "Add garlic and cook until onions are translucent and garlic is fragrant.",
+    "Add quinoa to pan, stir to combine. Slowly add in broth and bring to a boil.Cover and reduce heat to low, cook for 15 minutes.In the last 2-3 minutes of cooking add in broccolini on top of the quinoa (do not stir) and cover.Uncover and toss broccolini and quinoa together.Season to taste with salt and pepper.",
+    "Add walnuts and serve hot."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 625.07,
+    "protein_g": 19.85,
+    "carb_g": 71.66,
+    "fat_g": 30.69,
+    "sodium_mg": 971.81
+  },
+  "tags": [
+    "side dish",
+    "lunch",
+    "main course",
+    "main dish",
+    "dinner",
+    "gluten free",
+    "dairy free",
+    "lacto ovo vegetarian",
+    "vegan"
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": 820509890417015806,
+  "title": "Roasted Cranberries, Ricotta & Honey Crostini",
+  "ingredients": [
+    {
+      "name": "peasant bread",
+      "amount": "1.0 slice"
+    },
+    {
+      "name": "fresh-ground pepper",
+      "amount": "1.0 serving"
+    },
+    {
+      "name": "honey",
+      "amount": "1.0 serving"
+    },
+    {
+      "name": "ricotta",
+      "amount": "1.0 serving"
+    },
+    {
+      "name": "ricotta",
+      "amount": "1.0 serving"
+    },
+    {
+      "name": "sea salt",
+      "amount": "1.0 serving"
+    },
+    {
+      "name": "roasted cranberry sauce",
+      "amount": "1.0 serving"
+    }
+  ],
+  "instructions": [],
+  "per_serving_nutrition": {
+    "kcal": 290.49,
+    "protein_g": 9.33,
+    "carb_g": 47.44,
+    "fat_g": 7.83,
+    "sodium_mg": 441.27
+  },
+  "tags": [
+    "fingerfood",
+    "antipasti",
+    "starter",
+    "snack",
+    "appetizer",
+    "antipasto",
+    "hor d'oeuvre"
+  ]
+}

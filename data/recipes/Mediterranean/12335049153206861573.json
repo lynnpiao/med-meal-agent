@@ -1,0 +1,106 @@
+{
+  "id": 12335049153206861573,
+  "title": "Mushroom Crepes with Vegetarian Sauce",
+  "ingredients": [
+    {
+      "name": "corn",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "chives",
+      "amount": "1.0 tbsp"
+    },
+    {
+      "name": "dill",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "eggs",
+      "amount": "2.0"
+    },
+    {
+      "name": "garlic cloves",
+      "amount": "2.0"
+    },
+    {
+      "name": "garlic powder",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "ground coriander",
+      "amount": "0.5 tsp"
+    },
+    {
+      "name": "ground pepper",
+      "amount": "0.33333334 tsp"
+    },
+    {
+      "name": "cream",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "mushrooms",
+      "amount": "300.0 g"
+    },
+    {
+      "name": "oil",
+      "amount": "8.0 servings"
+    },
+    {
+      "name": "big onion",
+      "amount": "1.0"
+    },
+    {
+      "name": "parsley",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "sea salt",
+      "amount": "1.0 pinch"
+    },
+    {
+      "name": "sea salt",
+      "amount": "8.0 servings"
+    },
+    {
+      "name": "paprika",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "water",
+      "amount": "250.0 ml"
+    },
+    {
+      "name": "white wine",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "flour",
+      "amount": "200.0 g"
+    }
+  ],
+  "instructions": [
+    "Whisk the eggs.",
+    "Add the water and mix well (you can also use a hand-held mixer).",
+    "Sprinkle the flour while continuously whisking/mixing until it has the right consistency.",
+    "Heat some oil in a frying pan over medium-high heat. Grease the whole surface of the pan and then pour the oil in a cup. You’ll be reusing it.",
+    "Add the mushrooms and wine in your food processor. Blend until you get a thick paste.",
+    "Heat some 1 tbsp oil in a large saucepan.",
+    "Add the chopped onion. Sauté until golden, then add the mushroom paste and corn.",
+    "Add spices.Cook for 15 minutes ten add the chopped dill and parsley and cook for another 5 minutes.",
+    "Mix last four ingredients and pour sauce over the vegetarian mushroom crepes."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 184.39,
+    "protein_g": 7.11,
+    "carb_g": 24.45,
+    "fat_g": 6.4,
+    "sodium_mg": 251.19
+  },
+  "tags": [
+    "morning meal",
+    "brunch",
+    "breakfast",
+    "lacto ovo vegetarian"
+  ]
+}

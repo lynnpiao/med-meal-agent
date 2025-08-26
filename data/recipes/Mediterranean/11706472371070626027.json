@@ -1,0 +1,107 @@
+{
+  "id": 11706472371070626027,
+  "title": "Easy Cheesy Pizza Casserole",
+  "ingredients": [
+    {
+      "name": "equivalent amount of a ground beef/bulk sausage mix",
+      "amount": "1.0 lb"
+    },
+    {
+      "name": "ricotta",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "oregano",
+      "amount": "1.0 pinch"
+    },
+    {
+      "name": "basil",
+      "amount": "1.0 pinch"
+    },
+    {
+      "name": "parmesan cheese",
+      "amount": "1.0 Tbs"
+    },
+    {
+      "name": "pasta sauce",
+      "amount": "26.0 oz"
+    },
+    {
+      "name": "pizza sauce",
+      "amount": "1.0 can"
+    },
+    {
+      "name": "pepper flakes",
+      "amount": "0.125 tsp"
+    },
+    {
+      "name": "pepperoni",
+      "amount": "0.5"
+    },
+    {
+      "name": "mozzarella",
+      "amount": "2.0 cups"
+    },
+    {
+      "name": "aged provolone",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "herbed parmesan drop biscuits",
+      "amount": "6.0 servings"
+    },
+    {
+      "name": "additional parmesan cheese",
+      "amount": "6.0 servings"
+    },
+    {
+      "name": "baking mix",
+      "amount": "2.25 cup"
+    },
+    {
+      "name": "parmesan cheese",
+      "amount": "0.25 cup"
+    },
+    {
+      "name": "seasoning",
+      "amount": "1.0 tsp"
+    },
+    {
+      "name": "milk",
+      "amount": "0.6666667 cup"
+    },
+    {
+      "name": "or",
+      "amount": "1.0 serving"
+    },
+    {
+      "name": "or",
+      "amount": "6.0 servings"
+    }
+  ],
+  "instructions": [
+    "Brown ground beef in skillet; drain fat.",
+    "Mix in pasta or pizza sauce and pepper flakes; set aside.",
+    "Mix ricotta cheese with the herbs and Parmesan in a separate bowl; set aside.",
+    "Mix the dry ingredients for the biscuits.",
+    "Add milk and stir until combined.",
+    "Preheat oven to 375 degrees. Spray a 13 x 9 pan with non-stick spray. Drop biscuit dough by teaspoons in the bottom of pan, spacing evenly. It's OK if there is space between the dough--it will expand as it's cooked. Top with ground beef mixture and dot with the ricotta cheese mixture.",
+    "Bake at 375 for about 20 min or until biscuits are puffed and beginning to get golden brown.",
+    "Top with mozzarella and provolone cheeses and distribute pepperoni slices evenly over top, increase oven temperature to 425 degrees. Return to oven and bake until cheeses are melted and beginning to bubble. This should take about 10 minutes.",
+    "Remove from oven and let stand 5 minutes before slicing and serving. May be topped with the additional Parmesan cheese."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 902.23,
+    "protein_g": 56.72,
+    "carb_g": 46.77,
+    "fat_g": 54.57,
+    "sodium_mg": 3138.17
+  },
+  "tags": [
+    "side dish",
+    "lunch",
+    "main course",
+    "main dish",
+    "dinner"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": 18089133333275491735,
+  "title": "Easy Vegetable Fried Rice",
+  "ingredients": [
+    {
+      "name": "broccoli",
+      "amount": "1.0 cup"
+    },
+    {
+      "name": "butter",
+      "amount": "1.0 tbsp"
+    },
+    {
+      "name": "carrots",
+      "amount": "0.33333334 cup"
+    },
+    {
+      "name": "rice",
+      "amount": "2.0 cups"
+    },
+    {
+      "name": "egg",
+      "amount": "1.0"
+    },
+    {
+      "name": "garlic",
+      "amount": "1.0 clove"
+    },
+    {
+      "name": "ginger",
+      "amount": "1.0 tbsp"
+    },
+    {
+      "name": "green beans",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "peas",
+      "amount": "0.5 cup"
+    },
+    {
+      "name": "sesame oil",
+      "amount": "1.5 tbsp"
+    },
+    {
+      "name": "soy sauce",
+      "amount": "4.0 servings"
+    },
+    {
+      "name": "sugar",
+      "amount": "1.0 dash"
+    }
+  ],
+  "instructions": [
+    "First blanch the raw green vegetables by sticking them in a pot of boiling water for a couple of minutes and then draining them. If you're using frozen vegetables, follow the package cooking instructions, but stop shy of three minutes of cooking time so they don't get mushy.In large pan or wok, heat your sesame oil over medium heat. Throw in the garlic and ginger and fry that up for about a minute.",
+    "Add the carrots and stir quickly for a minute or two. Then add the rice.Now add soy sauce based on your saltiness preference.",
+    "Let that sizzle while you whip your egg in a small bowl. Move your rice to the edges of the pan so you have an empty space in the middle.",
+    "Add the egg and scramble it up. When it looks close to being cooked, stir the rice back into the middle of the pan.Next, throw in the broccoli and peas or other blanched vegetables of your choice.",
+    "Add the sugar and stir for a couple minutes, then add the butter. Once the butter is melted through, let the rice sit there.",
+    "Let it sizzle a bit.That's it!",
+    "Serve your fried rice."
+  ],
+  "per_serving_nutrition": {
+    "kcal": 235.37,
+    "protein_g": 7.47,
+    "carb_g": 30.2,
+    "fat_g": 9.64,
+    "sodium_mg": 1061.43
+  },
+  "tags": [
+    "side dish",
+    "antipasti",
+    "starter",
+    "snack",
+    "appetizer",
+    "antipasto",
+    "hor d'oeuvre",
+    "gluten free",
+    "lacto ovo vegetarian"
+  ]
+}
