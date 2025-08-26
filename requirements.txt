@@ -13,5 +13,14 @@ pypinyin
 pytest
 pypdf
 python-docx
-pillow
+pillow>=10.0
 pytest-dotenv
+requests 
+beautifulsoup4 
+tqdm 
+tenacity 
+python-slugify
+faiss-cpu 
+sentence-transformers 
+elasticsearch>=8,<9
+cohere

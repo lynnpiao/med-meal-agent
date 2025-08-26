@@ -34,17 +34,21 @@
 │  │  ├─ allergens.json                      # 基础词库映射(过敏原映射)
 │  │  ├─ conditions.json                     # 基础词库映射(疾病/状况映射)
 │  │  └─ ingredients.json                    # 基础词库映射(食材映射)
+│  ├─ profile_enum_map.py                    # Profile内中英映射词表与工具函数
 │  ├─ zh_lexicon.py                          # 中英映射词表与工具函数
 │  └─ units.py                               # 单位与数值换算（mmol→mg/dL、斤/两→g 等）
 ├─ parsers/
 │  ├─ health_report_zh.py                    # 中文体检报告抽取 → HealthReport
+│  ├─ user_profiles_zh.py                    # 中文userfile（sex/activity/conditions/allergens）抽取
 │  └─ base_dir/                              # 测试/演示用样例素材
 │     ├─ test.txt                            # OCR 文本样例
 │     ├─ test11.jpg                          # 图片样例（血压页）
 │     └─ test22.jpg                          # 图片样例（化验页）
 ├─ data/
-│  ├─ recipes/                               # 种子菜谱 JSON/MD
-│  └─ embeddings/                            # 向量库持久化
+│  ├─ recipes/                               # 种子菜谱 JSON
+│  ├─ embeddings/                            # 向量库持久化
+│  ├─ fetch_recipes.py                       # 从Spoonacular API 获取recipe，并生成种子菜谱JSON
+│  └─ zh_en_synonyms.yaml                    # 中英文菜谱内部词汇互换，支持ElasticSearch查询
 ├─ agents/
 │  ├─ tools.py                               # 工具函数（库存解析、清单生成）
 │  ├─ planner.py                             # Agent 调度与食谱规划
@@ -57,6 +61,7 @@
 │  └─ inventory.py                           # 库存管理
 ├─ tests/                                    # 单元/集成测试
 │  ├─ conftest.py                            # pytest 配置（加载 .env、注册标记等）
+│  ├─ test_models_userprofile_zh.py          # user profile离线/伪造测试
 │  ├─ test_parsers_health_report_zh_full.py  # 全量逻辑的离线/伪造测试
 │  ├─ test_parsers_health_report_zh_live.py  # 调真实 LLM 的 live 测试
 │  ├─ test_i18n_lexicon.py                   # 词库加载/映射测试
