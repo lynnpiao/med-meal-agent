@@ -24,3 +24,9 @@ faiss-cpu
 sentence-transformers 
 elasticsearch>=8,<9
 cohere
+pytesseract
+opencv-python
+ultralytics 
+torch 
+torchvision
+numpy

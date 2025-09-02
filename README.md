@@ -58,7 +58,8 @@
 ├─ services/
 │  ├─ recipe_retriever.py                    # 向量库构建与检索
 │  ├─ nutrition.py                           # 营养计算辅助函数
-│  └─ inventory.py                           # 库存管理
+│  ├─ vision_inventory.py                    # 库存管理（冰箱图片扫描OCR- LLM or OWL-ViT） 
+│  └─ inventory.py                           # 库存管理（text/购物小票OCR） 
 ├─ tests/                                    # 单元/集成测试
 │  ├─ conftest.py                            # pytest 配置（加载 .env、注册标记等）
 │  ├─ test_models_userprofile_zh.py          # user profile离线/伪造测试
