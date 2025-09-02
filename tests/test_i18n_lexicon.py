@@ -36,7 +36,7 @@ def test_normalization(zh_lexicon_mod):
 def test_pinyin_fallback_traditional(zh_lexicon_mod):
     zl = zh_lexicon_mod
     # 即便词库未显式列出“西蘭花”，拼音兜底应返回 broccoli
-    assert zl.map_ing_zh2en("西蘭花") == "broccoli"
+    assert zl.map_ing_zh2en("西蘭花") == "broccoli" 
 
 @pytest.mark.skipif(not HAS_RAPIDFUZZ, reason="需要 rapidfuzz 才能测试模糊兜底")
 def test_fuzzy_fallback(zh_lexicon_mod):
