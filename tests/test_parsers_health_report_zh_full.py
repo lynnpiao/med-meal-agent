@@ -50,6 +50,7 @@ def test_text_file_full_extraction(monkeypatch):
     monkeypatch.setattr(hr, "_llm_structured_from_text", fake_structured)
 
     report: HealthReport = hr.extract_health_report(HRSource(data=content, kind="text"))
+    
     assert report.systolic_bp == 135
     assert report.diastolic_bp == 70
     assert report.hba1c_percent == 6.4
@@ -320,6 +321,7 @@ def test_merge_two_images_full_coverage_later_wins(monkeypatch):
 
     # 合并用药（去重保序）与备注拼接
     assert rep.medications == ["阿司匹林", "维生素D", "叶酸"]
+    # print(rep.notes)
     assert rep.notes == "来自第一张 | 来自第二张"
 
 def test_merge_two_images_full_coverage_order_swap(monkeypatch):
@@ -363,3 +365,5 @@ def test_merge_two_images_full_coverage_order_swap(monkeypatch):
     # 用药合并与备注
     assert rep.medications == ["阿司匹林", "叶酸", "维生素D"]
     assert rep.notes == "来自第二张 | 来自第一张"
+    
+    

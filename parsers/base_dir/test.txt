@@ -1,1 +1,10 @@
-收缩压135mmHg；舒张压70mmHgHb；A1c 6.4%；LDL 3.3 mmol/L；ALT 48 U/L；TSH 2.1 mIU/L；Hb 130 g/L；Ferritin 60 μg/L；GDM：否；用药：二甲双胍，左甲状腺素。
+systolic 135mmHg；
+diastolic 70mmHgHb；
+A1c 6.4%；
+LDL 3.3 mmol/L；
+ALT 48 U/L；
+TSH 2.1 mIU/L；
+Hb 130 g/L；
+Ferritin 60 μg/L；
+GDM：否；
+medications：二甲双胍，左甲状腺素。

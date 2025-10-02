@@ -29,6 +29,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage
 from pydantic import BaseModel
 from langchain_core.output_parsers import PydanticOutputParser
+import unicodedata
 
 from i18n.units import (
     glucose_mgdl_from_mmol, chol_mgdl_from_mmol, tg_mgdl_from_mmol,
@@ -47,6 +48,13 @@ class HRExtract(BaseModel):
     # 糖化
     hba1c_percent: Optional[float] = None
 
+    # 血糖
+    fasting_glucose_value: Optional[float] = None
+    fasting_glucose_unit: Optional[str] = None   # mg/dL 或 mmol/L
+    ogtt_2h_glucose_value: Optional[float] = None
+    ogtt_2h_glucose_unit: Optional[str] = None
+
+    
     # 血脂
     ldl_value: Optional[float] = None
     ldl_unit: Optional[str] = None               # mg/dL 或 mmol/L
@@ -58,12 +66,6 @@ class HRExtract(BaseModel):
     total_cholesterol_unit: Optional[str] = None # mg/dL 或 mmol/L
     non_hdl_value: Optional[float] = None
     non_hdl_unit: Optional[str] = None           # mg/dL 或 mmol/L
-
-    # 血糖
-    fasting_glucose_value: Optional[float] = None
-    fasting_glucose_unit: Optional[str] = None   # mg/dL 或 mmol/L
-    ogtt_2h_glucose_value: Optional[float] = None
-    ogtt_2h_glucose_unit: Optional[str] = None
 
     # 肾功能
     creatinine_value: Optional[float] = None
@@ -255,33 +257,34 @@ def _llm_structured_from_text(text: str, model: str = "gpt-4o-mini") -> HRExtrac
     llm = ChatOpenAI(model=model, temperature=0)
     parser = PydanticOutputParser(pydantic_object=HRExtract)
     prompt = f"""
-你是医疗体检报告的信息抽取助手。请从以下中文文本中抽取指标，
-尽量保留原单位（如 mmol/L、mg/dL、µmol/L、ng/mL、g/L、U/L、mIU/L 等），没写的留空。
-只输出 JSON（不要额外解释）。字段尽量按原文精确抄写单位与数值。
-
-必须尝试抽取的字段（缺失可留空）：
-- 收缩压/舒张压（mmHg）
-- HbA1c（%）
-- 血糖：空腹血糖（值+单位 mg/dL 或 mmol/L）、OGTT 2h（值+单位）
-- 血脂：LDL/HDL/甘油三酯/总胆固醇/非HDL（各自的值+单位 mg/dL 或 mmol/L）
-- 肾功能：肌酐（值+单位 mg/dL 或 µmol/L/umol/L）、eGFR（值+单位，mL/min/1.73m²）
-- 肝功能：ALT、AST（值+单位 U/L 或 IU/L）
-- 尿酸（值+单位 mg/dL 或 µmol/L/umol/L）
-- TSH（值+单位：uIU/mL、µIU/mL、mIU/L 或 mU/L）
-- 维生素D（25(OH)D，值+单位 ng/mL 或 nmol/L）
-- 血红蛋白（值+单位 g/dL 或 g/L）
-- 铁蛋白（值+单位 ng/mL 或 μg/L/ug/L）
-- 孕周（周数，数字）
-- 妊娠期糖尿病（gdm：是/否）
-- 用药（若有，尽量抽取为列表；或以逗号/顿号/分号分隔的字符串）
-- 备注（可选）
-
-文本：
-{text}
-
-严格按以下 Pydantic 模式输出（仅 JSON）：
-{parser.get_format_instructions()}
-"""
+    
+    你是医疗体检报告的信息抽取助手。请从以下中文文本中抽取指标，
+    尽量保留原单位（如 mmol/L、mg/dL、µmol/L、ng/mL、g/L、U/L、mIU/L 等），没写的留空。
+    只输出 JSON（不要额外解释）。字段尽量按原文精确抄写单位与数值。
+    
+    必须尝试抽取的字段（缺失可留空）：
+    - 收缩压 （高压）（mmHg）
+    - 舒张压（低压）（mmHg）
+    - 糖化血红蛋白 （糖化血红蛋白A1c、HbA1c）（%）
+    - 血脂：低密度脂蛋白胆固醇（LDL）/高密度脂蛋白胆固醇（HDL）/甘油三酯/总胆固醇/非高密度脂蛋白胆固醇（非HDL）（各自的值+单位 mg/dL 或 mmol/L）
+    - 血糖：空腹血糖（值+单位 mg/dL 或 mmol/L）、口服葡萄糖耐量试验2小时血糖 /OGTT 2h（值+单位）
+    - 肾功能：血肌酐/肌酐（值+单位 mg/dL 或 µmol/L/umol/L）、估算肾小球滤过率/eGFR（值+单位，mL/min/1.73m²）
+    - 肝功能：丙氨酸氨基转移酶/谷丙转氨酶/ALT、 天门冬氨酸氨基转移酶/谷草转氨酶/AST（值+单位 U/L 或 IU/L）
+    - 尿酸（值+单位 mg/dL 或 µmol/L/umol/L）
+    - 促甲状腺激素/TSH（值+单位：uIU/mL、µIU/mL、mIU/L 或 mU/L）
+    - 维生素D/25-羟维生素D（25(OH)D，值+单位 ng/mL 或 nmol/L）
+    - 血红蛋白/Hb（值+单位 g/dL 或 g/L）
+    - 铁蛋白/Ferritin（值+单位 ng/mL 或 μg/L/ug/L）
+    - 妊娠周数/孕周（周数，数字）
+    - 妊娠期糖尿病（gdm：是/否）
+    - 用药/当前用药/服用药物/既往用药/目前用药（若有，尽量抽取为列表；或以逗号/顿号/分号分隔的字符串）
+    - 备注/说明/附注/评注/医生建议（可选）
+    
+    文本：{text}
+    严格按以下 Pydantic 模式输出（仅 JSON）：
+    {parser.get_format_instructions()}
+    
+    """
     raw = llm.invoke(prompt).content
     return parser.parse(raw)
 
@@ -302,17 +305,17 @@ def preprocess_for_ocr(img_bytes: bytes) -> bytes:
     w, h = im.size
     draw = ImageDraw.Draw(im)
 
-    # Header：约 22% 高度
-    draw.rectangle([0, 0, w, int(h * 0.22)], fill="white")
+    # Header：约 15%
+    draw.rectangle([0, 0, w, int(h * 0.15)], fill="white")
 
-    # Footer：约 90%~100%
-    draw.rectangle([0, int(h * 0.90), w, h], fill="white")
+    # Footer：仅最后 5%
+    draw.rectangle([0, int(h * 0.95), w, h], fill="white")
 
     # 右下角二维码/条形码常见区域
-    draw.rectangle([int(w * 0.78), int(h * 0.78), w, h], fill="white")
+    draw.rectangle([int(w * 0.88), int(h * 0.88), w, h], fill="white")
 
     # 中上方再盖一条（视情况保守一点）
-    draw.rectangle([0, int(h * 0.22), w, int(h * 0.27)], fill="white")
+    draw.rectangle([0, int(h * 0.10), w, int(h * 0.15)], fill="white")
 
     buf = io.BytesIO()
     im.save(buf, format="PNG")
@@ -323,7 +326,7 @@ def _llm_ocr_image_to_text(image_bytes: bytes, model: str = "gpt-4o-mini", do_pr
     用 LLM 的视觉能力从图片中“抄录”检测结果为纯文本。
     返回值直接再喂 _llm_structured_from_text。
     """
-    # 先做图像预处理，尽量去掉可能触发拒答的 PII/二维码/机构抬头
+    # 先做图像预处理，尽量去掉可能触发拒答的 PII/二维码/机构抬头(这里可能要小心， 如果裁剪的大小不合适， 会将重要信息覆盖，可能需要规范化报告的格式大小)
     if do_preprocess:
         try:
             image_bytes = preprocess_for_ocr(image_bytes)
@@ -340,11 +343,15 @@ def _llm_ocr_image_to_text(image_bytes: bytes, model: str = "gpt-4o-mini", do_pr
             "type": "text",
             "text": (
                 "这是一张中文体检/化验单图片。"
-                "请仅抄录与以下医学指标相关的条目为纯文本：血压、血糖、HbA1c、"
-                "血脂(LDL/HDL/甘油三酯/总胆固醇/非HDL)、肌酐、eGFR、尿酸、ALT、AST、"
-                "25(OH)D、血红蛋白、铁蛋白、孕周、妊娠期糖尿病、用药、备注。"
-                "【重要】忽略并不要输出任何个人身份或联系方式信息（如姓名、证件号、用户ID、电话号码、地址、二维码/条形码等）。"
-                "直接逐条输出“项目 数值 单位”的原文文本，不要解释、不翻译。缺失的项目不必输出。"
+                "请仅抄录与以下医学指标相关的条目为纯文本：血压/收缩压 （高压）/舒张压（低压）、血糖/糖化血红蛋白/HbA1c、空腹血糖/FBS、口服葡萄糖耐量试验2小时血糖 /OGTT 2h"
+                "血脂(低密度脂蛋白胆固醇（LDL）/高密度脂蛋白胆固醇（HDL）/甘油三酯/总胆固醇/非高密度脂蛋白胆固醇（非HDL）)、血肌酐（肌酐）" 
+                "估算肾小球滤过率/eGFR、血尿酸/尿酸、丙氨酸氨基转移酶/ALT、天门冬氨酸氨基转移酶/AST、"
+                "25(OH)D/维生素D、促甲状腺激素/TSH、血红蛋白、铁蛋白、妊娠周期/孕周、妊娠期糖尿病、用药/常用药/近期用药、备注/说明/建议。"
+                "输出规则：\n"
+                "• 对于数值类项目：按“项目 空格 数值 空格 单位”的格式逐条输出，如“收缩压 126 mmHg”。\n"
+                "• 对于非数值项目（用药、备注）：请原样整行输出，例如“用药：阿司匹林，维生素D”“备注：来自第一张”。\n"
+                "务必包含‘用药’与‘备注’（若图片上存在）。\n"
+                "禁止输出任何个人身份信息（姓名/证件号/电话/地址/二维码等）。"
             ),
         },
         {"type": "image_url", "image_url": {"url": f"data:image/png;base64,{b64}" }},
@@ -374,7 +381,6 @@ def _docx_to_text(docx_bytes: bytes) -> str:
         raise RuntimeError("需要依赖 python-docx 来读取 DOCX 文本，请先安装。") from e
     doc = docx.Document(io.BytesIO(docx_bytes))
     return "\n".join(p.text for p in doc.paragraphs).strip()
-
 
 # -----------------------------
 # 统一入口
@@ -466,48 +472,56 @@ def extract_health_report_from_zh(text: str, model: str = "gpt-4o-mini") -> Heal
     unified = _to_mgdl_or_ngml(extracted)
     return HealthReport(**unified)
 
+def _norm_text(s: str) -> str:
+    # 统一空白、全角/半角、大小写，去两端空格
+    s = unicodedata.normalize("NFKC", s or "")
+    s = s.strip().lower()
+    # 可按需要再去多余空格
+    s = " ".join(s.split())
+    return s
 
 def merge_health_reports(reports: Iterable[HealthReport]) -> HealthReport:
+    """把一批 HealthReport 合并成一个 merged.
+    1. 常规字段（除 medications、notes) 后者覆盖前者。
+    2. medications:做不区分大小写的去重合并。对每个 rep.medications, 用 m.lower() 当键，没见过就追加到累计列表 meds_acc 中（保留原始大小写）。
+    3. notes: 把每份报告的备注串起来,用 " | " 连接
     """
-    将多个 HealthReport 合并为一个：
-    - 规则：后者覆盖前者（later wins），None 不覆盖
-    - medications：合并去重，保序
-    - notes：拼接（用 " | " 连接）
-    """
-    merged = HealthReport()  # 全部字段 Optional，空构造合法
-    meds_acc: List[str] = []
-    notes_acc: List[str] = []
+    reports = list(reports)  # 若需要按时间优先，在这里排序：reports.sort(key=lambda r: r.timestamp)
+    merged = HealthReport()  # 假设允许空构造
+    meds_acc, meds_seen = [], set()
+    notes_acc = []
 
-    def _merge_one(rep: HealthReport):
-        nonlocal meds_acc, notes_acc
-        # 常规字段：后者覆盖前者（遍历“类”的字段定义，避免实例上的已弃用属性）
+    def nonempty(v):
+        # 避免空串覆盖；None 和 "" 都视为“空”
+        return (v is not None) and (v != "")
+
+    for rep in reports:
+        # 1) 常规字段：非空才覆盖
         for name in HealthReport.model_fields.keys():
             if name in {"medications", "notes"}:
                 continue
             val = getattr(rep, name, None)
-            if val is not None:
+            if nonempty(val):
                 setattr(merged, name, val)
 
-        # medications：合并去重
+        # 2) medications：合并去重（更强归一化）
         if rep.medications:
-            seen = {m.lower(): m for m in meds_acc}
             for m in rep.medications:
-                k = m.lower()
-                if k not in seen:
-                    meds_acc.append(m)
-                    seen[k] = m
+                if not m:
+                    continue
+                k = _norm_text(m)
+                if k not in meds_seen:
+                    meds_acc.append(m)     # 保留原写法
+                    meds_seen.add(k)
 
-        # notes：拼接
+        # 3) notes：改为换行连接（更可读）
         if rep.notes:
-            notes_acc.append(rep.notes)
-
-    for r in reports:
-        _merge_one(r)
+            notes_acc.append(rep.notes.strip())
 
     if meds_acc:
         merged.medications = meds_acc
     if notes_acc:
-        merged.notes = " | ".join(notes_acc)
+        merged.notes = " | ".join(n.strip() for n in notes_acc if n and n.strip())
 
     return merged
 
