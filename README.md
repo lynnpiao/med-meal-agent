@@ -36,14 +36,19 @@
 │  │  └─ ingredients.json                    # 基础词库映射(食材映射)
 │  ├─ profile_enum_map.py                    # Profile内中英映射词表与工具函数
 │  ├─ zh_lexicon.py                          # 中英映射词表与工具函数
+│  ├─ utils.py                               # norm zh format
 │  └─ units.py                               # 单位与数值换算（mmol→mg/dL、斤/两→g 等）
 ├─ parsers/
-│  ├─ health_report_zh.py                    # 中文体检报告抽取 → HealthReport
+│  ├─ health_report_zh.py                    # 中文体检报告抽取 → HealthReport （prompt 优化）
 │  ├─ user_profiles_zh.py                    # 中文userfile（sex/activity/conditions/allergens）抽取
 │  └─ base_dir/                              # 测试/演示用样例素材
-│     ├─ test.txt                            # OCR 文本样例
-│     ├─ test11.jpg                          # 图片样例（血压页）
-│     └─ test22.jpg                          # 图片样例（化验页）
+│     ├─ test.txt                            # OCR 文本样例 --for monkeypath structure test
+│     ├─ test_zh.txt                         # OCR 文本样例 -- for LLM live test
+│     ├─ test_first.png                      # 图片样例（第一个检查报告）--for LLM live test
+│     ├─ test_second.png                     # 图片样例（第二个检查报告）--for LLM live test
+│     ├─ test_second2.png                    # 图片样例（第二个检查报告）--for LLM live test （ umol/L）
+│     ├─ test11.jpg                          # 图片样例（血压页）--for monkeypath structure test
+│     └─ test22.jpg                          # 图片样例（化验页）--for monkeypath structure test
 ├─ data/
 │  ├─ recipes/                               # 种子菜谱 JSON
 │  ├─ embeddings/                            # 向量库持久化
@@ -65,10 +70,12 @@
 │  ├─ test_models_userprofile_zh.py          # user profile离线/伪造测试
 │  ├─ test_parsers_health_report_zh_full.py  # 全量逻辑的离线/伪造测试
 │  ├─ test_parsers_health_report_zh_live.py  # 调真实 LLM 的 live 测试
+│  ├─ test_services_inventory.py             # 冰箱结构化扫描（text）
+│  ├─ test_services_vision_inventory.py      # 冰箱结构化扫描（OCR-冰箱图片）
 │  ├─ test_i18n_lexicon.py                   # 词库加载/映射测试
 │  └─ test_i18n_units.py                     # 单位/数值换算测试
 ├─ app.py                                    # FastAPI 服务入口
-├─ seed_recipes.py                           # 构建向量库脚本
+├─ seed_recipes.py                           # 构建向量库脚本 
 ├─ requirements.txt
 └─ README.md
 &lt;/pre&gt;
