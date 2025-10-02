@@ -4,23 +4,24 @@ from __future__ import annotations
 from typing import Literal
 
 from models.schemas import Sex, ActivityLevel  # 直接用你的枚举，避免拼写错
+from i18n.utils import _normalize_zh
 
-def _normalize_zh(s: str) -> str:
-    import re
-    s = (s or "").strip().lower()
-    # 全角转半角
-    def _dbc2sbc(ch):
-        code = ord(ch)
-        if code == 0x3000:
-            return " "
-        if 0xFF01 <= code <= 0xFF5E:
-            return chr(code - 0xFEE0)
-        return ch
-    s = "".join(_dbc2sbc(ch) for ch in s)
-    # 去常见标点与多空格
-    s = re.sub(r"[，。、“”‘’！（）()【】\[\]{}：:；;·\-—_、/\\]", " ", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
+# def _normalize_zh(s: str) -> str:
+#     import re
+#     s = (s or "").strip().lower()
+#     # 全角转半角
+#     def _dbc2sbc(ch):
+#         code = ord(ch)
+#         if code == 0x3000:
+#             return " "
+#         if 0xFF01 <= code <= 0xFF5E:
+#             return chr(code - 0xFEE0)
+#         return ch
+#     s = "".join(_dbc2sbc(ch) for ch in s)
+#     # 去常见标点与多空格
+#     s = re.sub(r"[，。、“”‘’！（）()【】\[\]{}：:；;·\-—_、/\\]", " ", s)
+#     s = re.sub(r"\s+", " ", s).strip()
+#     return s
 
 # —— 性别映射 ——（含常见同义词）
 _SEX_ZH2EN = {

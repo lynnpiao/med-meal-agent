@@ -29,6 +29,7 @@ import os
 import re
 import glob
 import json
+from i18n.utils import normalize_zh
 
 # 可选：模糊匹配库（未安装也可跑）
 try:
@@ -48,40 +49,39 @@ except Exception:
 # -----------------------
 # 规范化工具
 # -----------------------
-def normalize_zh(s: str) -> str:
-    """
-    中文字符串规范化：
-    - 去首尾空格、转小写
-    - 全角转半角（含全角引号 → ASCII 引号）
-    - 删除常见标点（包含 ASCII " 和 '）
-    - 压缩多空格
-    - 若含中文字符，移除所有空格（OCR 常见把汉字分隔开）
-    """
-    s = (s or "").strip().lower()
+# def normalize_zh(s: str) -> str:
+#     """
+#     中文字符串规范化：
+#     - 去首尾空格、转小写
+#     - 全角转半角（含全角引号 → ASCII 引号）
+#     - 删除常见标点（包含 ASCII " 和 '）
+#     - 压缩多空格
+#     - 若含中文字符，移除所有空格（OCR 常见把汉字分隔开）
+#     """
+#     s = (s or "").strip().lower()
 
-    # 全角→半角
-    def _dbc2sbc(ch: str) -> str:
-        code = ord(ch)
-        if code == 0x3000:     # 全角空格
-            return " "
-        if 0xFF01 <= code <= 0xFF5E:
-            return chr(code - 0xFEE0)
-        return ch
+#     # 全角→半角
+#     def _dbc2sbc(ch: str) -> str:
+#         code = ord(ch)
+#         if code == 0x3000:     # 全角空格
+#             return " "
+#         if 0xFF01 <= code <= 0xFF5E:
+#             return chr(code - 0xFEE0)
+#         return ch
 
-    s = "".join(_dbc2sbc(ch) for ch in s)
+#     s = "".join(_dbc2sbc(ch) for ch in s)
 
-    # 删除常见标点（新增 ASCII 引号 " '）
-    s = re.sub(r'[，。、“”‘’"\'！（）()【】\[\]{}：:；;·\-—_、/\\]', " ", s)
+#     # 删除常见标点（新增 ASCII 引号 " '）
+#     s = re.sub(r'[，。、“”‘’"\'！（）()【】\[\]{}：:；;·\-—_、/\\]', " ", s)
 
-    # 压缩多空格
-    s = re.sub(r"\s+", " ", s).strip()
+#     # 压缩多空格
+#     s = re.sub(r"\s+", " ", s).strip()
 
-    # 若包含中文字符，把空格全部去掉，避免 OCR/手输造成的“分词”
-    if re.search(r"[\u4e00-\u9fff]", s):
-        s = s.replace(" ", "")
+#     # 若包含中文字符，把空格全部去掉，避免 OCR/手输造成的“分词”
+#     if re.search(r"[\u4e00-\u9fff]", s):
+#         s = s.replace(" ", "")
 
-    return s
-
+#     return s
 
 
 def normalize_en(s: str) -> str:
